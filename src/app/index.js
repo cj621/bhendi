@@ -1,4 +1,4 @@
-'use strict';
+  'use strict';
 
 angular.module('bhendi', ['ngAnimate', 'ngTouch', 'ngSanitize', 'restangular', 'ui.router', 'ngMaterial'])
   .config(function ($stateProvider, $urlRouterProvider) {

@@ -2,6 +2,7 @@
 
 angular.module('bhendi')
   .controller('MainCtrl', function ($scope) {
+    $scope.raj='Rajhans';
     $scope.awesomeThings = [
       {
         'title': 'AngularJS',

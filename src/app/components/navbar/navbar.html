@@ -1,9 +1,60 @@
-<md-toolbar layout="row" layout-align="center center" ng-controller="NavbarCtrl">
 
-  <section flex layout="row" layout-align="left center">
-    <md-button href="#" class="md-raised">Home</md-button>
-    <md-button href="#" class="md-raised">About</md-button>
-    <md-button href="#" class="md-raised">Contact</md-button>
-  </section>
+  
+<div layout="column" ng-controller="NavbarCtrl">
 
-</md-toolbar>
+   
+  <md-sidenav md-component-id="left" class="md-sidenav-left" md-is-locked-open="$mdMedia('gt-md')">
+          <md-toolbar class="md-tall md-hue-2">
+        <span flex></span>
+        <div layout="column" class="md-toolbar-tools-bottom inset">
+          
+          <span></span>
+          <div>Firstname Lastname</div>
+          <div>email@domainname.com</div>
+        </div>
+      </md-toolbar>
+
+
+      <md-list>
+      <md-item ng-repeat="item in menu">
+        <a>
+          <md-item-content md-ink-ripple layout="row" layout-align="start center">
+            <div class="inset">
+             
+            </div>
+            <div class="inset">{{item.title}}
+            </div>
+          </md-item-content>
+        </a>
+      </md-item>
+      <md-divider></md-divider>
+      <md-subheader>Management</md-subheader>
+      <md-item ng-repeat="item in admin">
+        <a>
+          <md-item-content md-ink-ripple layout="row" layout-align="start center">
+            <div class="inset">
+             
+            </div>
+            <div class="inset">{{item.title}}
+            </div>
+          </md-item-content>
+        </a>
+      </md-item>
+    </md-list>
+  </md-sidenav>
+ 
+    <md-button ng-click="openLeftMenu()">
+      =
+    </md-button>
+
+     
+  
+   <div layout="column" class="relative" layout-fill role="main">
+<md-button class="md-fab md-fab-bottom-right"  ng-click="showAdd($event)">
+        +
+      </md-button>
+ 
+   
+</div>
+
+
